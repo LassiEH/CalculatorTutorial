@@ -21,6 +21,12 @@ int main()
     while (true)
     {
         cin >> firstNum >> operation >> secondNum;
+
+        if (operation == '/' && secondNum == 0.0) {
+            cout << "Cannot divide by zero";
+            continue;
+        }
+
         result = c.Calculate(firstNum, operation, secondNum);
         cout << "Result is: " << result << endl;
     }
